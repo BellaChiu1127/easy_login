@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Chat {% endblock %}
+{% block content%}
+
+    {% for vlist in user_list %}
+    <h1> 使用者 : {{vlist.user_id }} </h1>
+    <ul>
+      <li>密碼 : {{ vlist.user_psd }}</li>
+      <li>訊息：{{ vlist.user_msg }}</li>
+    </ul>
+    {% endfor %}
+    {% endblock %}
